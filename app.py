@@ -16,13 +16,13 @@ import pandas as pd
 
 #%% Page Configs & Styling
 st.set_page_config(
-    page_title = 'Female Options Calculator',
+    page_title = 'Female Delusion Calculator',
     page_icon = '🤹‍♀️',
     layout = 'wide',
     initial_sidebar_state = 'collapsed',
-    menu_items = {'Get Help': 'https://www.extremelycoolapp.com/help',
-                  'Report a bug': "https://www.extremelycoolapp.com/bug",
-                  'About': 'Check out beccamayers.com for more info about the developer.'})
+    menu_items = {'Get Help': '#',
+                  'Report a bug': "#",
+                  'About': 'Check out remakethelastjedi.com for more info about the developer.'})
 
 #%% Reduce header padding; Hide hamburger + footer; Reduce footer padding
 hide_streamlit_style = """
@@ -99,21 +99,13 @@ st.session_state.height_range = initial_male_df['Height'].drop_duplicates().sort
 #-----------------------------------------------------------------------------#
 #%% Begin App
 
-# Header credits
-header = '[About](https://www.github.com/becca-mayers/female-options-app) | [Contact](mail-to:rebecca.here.live@gmail.com)'
-st.markdown(header, unsafe_allow_html = True)
 
 st.markdown('''---''')
 
 # Header/Subheader
-st.markdown('# Female Options Calculator')
-st.markdown('## What are the chances of finding the man of my dreams?')
-st.markdown('The accurate alternative to the [Female Delusional Calculator](https://www.igotstandardsbro.com).')
+st.markdown('# Female Delusion Calculator')
 
-# Hero image
-kissing_frogs = Image.open('imgs/kissing-frogs.png')
-st.image(kissing_frogs)
-st.write('Image Source [NBC News](https://www.nbcnews.com/better/lifestyle/how-be-better-online-dating-according-psychology-ncna979791). Data Sourced from the [2020 CDC National Health Interview Survey (NHIS)](https://www.cdc.gov/nchs/nhis/2020nhis.htm)  data.')
+st.write('Data Sourced from the [2020 CDC National Health Interview Survey (NHIS)](https://www.cdc.gov/nchs/nhis/2020nhis.htm)  data.')
 
 st.markdown('''---''')
 
@@ -350,11 +342,6 @@ mcol1, mcol2, mcol3 = st.columns([2, 3, 2])
 
 with mcol1:
     st.write('')
-
-with mcol2:  
-    # Footer credits
-    footer = '[About](https://www.github.com/becca-mayers/female-options-app) | [Contact](mail-to:rebecca.here.live@gmail.com) | Created with 💙 by [Rebecca Mayers](https://www.beccamayers.com)'
-    st.markdown(footer, unsafe_allow_html = True)
 
 with mcol3:
     st.write('')
